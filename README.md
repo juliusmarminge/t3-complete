@@ -1,4 +1,11 @@
-# Create T3 App
+# Create T3 App (extended)
+
+This is an extended version of the [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app` that includes:
+
+- UI Components using [shadcn/ui](https:://github.com/shadcn/ui) - which is built on top of [Radix UI](https://radix-ui.com) & [Tailwind CSS](https://tailwindcss.com)
+- Full-Stack CRUD example with tRPC mutations (protected routes) using the UI components together with [react-hook-form](https://react-hook-form.com).
+
+---
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
