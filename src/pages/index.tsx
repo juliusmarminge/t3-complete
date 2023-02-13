@@ -10,6 +10,8 @@ const Home: NextPage = () => {
   const { data: session } = useSession();
   const hello = api.hello.useQuery({ text: session?.user.name });
 
+  console.log("session", session);
+
   return (
     <>
       <Head>
@@ -65,7 +67,11 @@ const AuthShowcase: React.FC = () => {
     <div className="flex flex-col items-center justify-center gap-4">
       <button
         className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
-        onClick={sessionData ? () => void signOut() : () => void signIn()}
+        onClick={
+          sessionData
+            ? () => signOut().catch((err) => console.error(err))
+            : () => signIn()
+        }
       >
         {sessionData ? "Sign out" : "Sign in"}
       </button>

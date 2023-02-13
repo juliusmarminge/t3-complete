@@ -3,6 +3,7 @@ import { z } from "zod";
 
 import { PostCategory } from "@prisma/client";
 import { useSession } from "next-auth/react";
+import { Avatar, AvatarFallback, AvatarImage } from "~/ui/avatar";
 import { Button } from "~/ui/button";
 import {
   Dialog,
@@ -122,6 +123,7 @@ function CreatePostForm() {
 }
 
 function PostCard(props: { post: RouterOutputs["post"]["getAll"][number] }) {
+  const { data: session } = useSession();
   const { post } = props;
   const utils = api.useContext();
   const deletePost = api.post.delete.useMutation({
@@ -131,6 +133,10 @@ function PostCard(props: { post: RouterOutputs["post"]["getAll"][number] }) {
   });
   return (
     <div className="flex flex-row rounded-lg bg-white/10 p-4 transition-all hover:scale-[101%]">
+      <Avatar className="mr-2 self-center">
+        <AvatarImage src={post.author.image} alt="@shadcn" />
+        <AvatarFallback>{post.author.name.substring(0, 2)}</AvatarFallback>
+      </Avatar>
       <div className="flex-grow">
         <h2 className="text-2xl font-bold">{post.title}</h2>
         <p className="mt-2 text-sm">{post.body}</p>
@@ -153,6 +159,7 @@ function PostCard(props: { post: RouterOutputs["post"]["getAll"][number] }) {
             <DialogClose asChild>
               <Button
                 variant="destructive"
+                disabled={!session}
                 onClick={() => deletePost.mutate({ id: post.id })}
               >
                 Delete
