@@ -7,7 +7,8 @@
     "dev": "next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
@@ -39,6 +40,7 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.30.0",
     "@types/node": "^18.11.18",
     "@types/prettier": "^2.7.2",
     "@types/react": "^18.0.26",
@@ -54,7 +56,8 @@
     "prettier-plugin-tailwindcss": "^0.2.1",
     "prisma": "^4.9.0",
     "tailwindcss": "^3.2.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "vitest": "^0.28.5"
   },
   "ct3aMetadata": {
     "initVersion": "7.5.1"
