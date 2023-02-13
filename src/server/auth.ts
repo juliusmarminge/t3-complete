@@ -38,7 +38,7 @@ const mockProvider = CredentialsProvider({
   id: "discord", // <-- same id so we still match `signIn("discord")` if we use it
   name: "Mocked Provider",
   credentials: {
-    name: { label: "Name", type: "text" },
+    name: { label: "Name", type: "text", placeholder: "Name" },
   },
   authorize(credentials) {
     if (credentials) {
