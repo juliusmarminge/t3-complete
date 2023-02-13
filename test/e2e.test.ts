@@ -1,7 +1,5 @@
 import { expect, test } from "@playwright/test";
 
-test.setTimeout(35e3);
-
 test("sign in a user", async ({ page }) => {
   await page.goto("/");
 
