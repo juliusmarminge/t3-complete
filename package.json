@@ -9,11 +9,13 @@
     "postinstall": "prisma generate",
     "lint": "next lint",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "start": "next start",
     "test": "pnpm test:unit && pnpm test:e2e",
     "test:unit": "vitest run",
     "test:unit:watch": "vitest",
-    "test:e2e": "start-server-and-test dev 3000 \"NODE_ENV=test playwright test\""
+    "test:e2e": "start-server-and-test dev 3000 \"NODE_ENV=test playwright test\"",
+    "ts:check": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
