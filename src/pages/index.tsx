@@ -35,9 +35,13 @@ const Home: NextPage = () => {
               className="flex max-w-sm flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
               href="/posts"
             >
-              <h3 className="flex items-center gap-2 text-2xl font-bold">
+              <h3 className="relative flex items-center gap-2 text-2xl font-bold">
                 <Book />
                 Posts
+                <span className="absolute top-0 right-52 flex h-5 w-5 animate-bounce items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-700 opacity-75" />
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-indigo-500" />
+                </span>
               </h3>
               <div className="text-md">
                 See what others post and submit your own
