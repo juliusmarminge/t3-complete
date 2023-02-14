@@ -37,15 +37,15 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies and playwright binaries
-        run: pnpm install && pnpm playwright install --with-deps
-
-      - name: Push schema to database
-        run: pnpx prisma db push
+        run: pnpm install && pnpm playwright install chromium
 
       - name: Setup environment variables
         run: |
           cp .env.example .env
           echo "NEXTAUTH_SECRET=supersecret" >> .env
+
+      - name: Push schema to database
+        run: pnpx prisma db push
 
       - name: Build application
         run: pnpm build
