@@ -38,15 +38,16 @@ export const postCreateSchema = z.object({
 function CreatePostForm() {
   const { data: session } = useSession();
 
+  const methods = useZodForm({
+    schema: postCreateSchema,
+  });
+
   const utils = api.useContext();
   const createPost = api.post.create.useMutation({
     onSettled: async () => {
       await utils.post.invalidate();
+      methods.reset();
     },
-  });
-
-  const methods = useZodForm({
-    schema: postCreateSchema,
   });
 
   const onSubmit = methods.handleSubmit(

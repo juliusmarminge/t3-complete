@@ -11,6 +11,39 @@ This is an extended version of the [T3 Stack](https://create.t3.gg/) project boo
 
 [Try it out now!](https://t3-complete.vercel.app)
 
+## Getting Started
+
+1. Install deps
+
+```bash
+pnpm install
+```
+
+2. Start the db
+
+```bash
+docker compose up -d
+```
+
+3. Update env and push the schema to the db
+
+```bash
+cp .env.example .env
+pnpm prisma db push
+```
+
+4. Start the dev server
+
+```bash
+pnpm dev
+```
+
+5. Run the tests
+
+```bash
+pnpm test
+```
+
 ---
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
