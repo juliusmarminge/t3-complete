@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  e2e:
+  test:
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -50,7 +50,5 @@ jobs:
       - name: Build application
         run: pnpm build
 
-      - name: Run your tests
-        run: pnpm test:e2e
-        env:
-          NODE_ENV: test
+      - name: Run all tests
+        run: pnpm test

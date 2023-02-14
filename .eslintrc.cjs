@@ -1,3 +1,4 @@
+/** @type{import("eslint").Linter.Config} */
 module.exports = {
   overrides: [
     {
@@ -5,6 +6,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
       ],
       files: ["*.ts", "*.tsx"],
+      excludedFiles: ["**/*.test.ts", "**/*.test.tsx"],
       parserOptions: {
         project: "tsconfig.json",
       },
