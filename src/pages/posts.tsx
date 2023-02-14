@@ -143,7 +143,12 @@ function PostCard(props: { post: RouterOutputs["post"]["getAll"][number] }) {
       </div>
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="destructive">Delete</Button>
+          <Button
+            variant="destructive"
+            data-testid={`delete-post-${post.title}`}
+          >
+            Delete
+          </Button>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>

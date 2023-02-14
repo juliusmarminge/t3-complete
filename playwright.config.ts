@@ -9,12 +9,22 @@ const opts = {
 };
 
 const config: PlaywrightTestConfig = {
-  testDir: "./test",
+  testDir: "./e2e",
+  globalSetup: "./e2e/setup/global.ts",
   use: {
-    ...devices["Desktop Chrome"],
-    baseURL: baseUrl,
-    headless: opts.headless,
+    trace: "retry-with-trace",
+    storageState: "./e2e/setup/storage-state.json",
   },
+  projects: [
+    {
+      name: "Desktop Chrome",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: baseUrl,
+        ...opts,
+      },
+    },
+  ],
 };
 
 export default config;

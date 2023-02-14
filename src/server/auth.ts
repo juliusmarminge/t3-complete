@@ -5,7 +5,6 @@ import {
   type DefaultSession,
   type NextAuthOptions,
 } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
 import DiscordProvider from "next-auth/providers/discord";
 
 import { env } from "../env.mjs";
@@ -33,28 +32,6 @@ declare module "next-auth" {
   // }
 }
 
-// Mocked NextAuth.js provider for testing purposes
-const mockProvider = CredentialsProvider({
-  id: "discord", // <-- same id so we still match `signIn("discord")` if we use it
-  name: "Mocked Provider",
-  credentials: {
-    name: { label: "Name", type: "text", placeholder: "Name" },
-  },
-  authorize(credentials) {
-    if (credentials) {
-      const user = {
-        id: credentials.name,
-        name: credentials.name,
-        email: credentials.name,
-        image: "https://github.com/octocat.png",
-      };
-      return user;
-    }
-    return null;
-  },
-});
-const useMock = env.NODE_ENV === "test" || !!"overridden";
-
 /**
  * Options for NextAuth.js used to configure adapters, providers, callbacks,
  * etc.
@@ -64,40 +41,31 @@ const useMock = env.NODE_ENV === "test" || !!"overridden";
 
 export const authOptions: NextAuthOptions = {
   callbacks: {
-    session({ session, user, token }) {
+    session({ session, user }) {
       if (session.user && user) {
         session.user.id = user.id;
         // session.user.role = user.role; <-- put other properties on the session here
-      } else if (token && useMock) {
-        session.user = { ...token, id: token.jti as string };
-      } else {
-        throw new Error("unreachable state");
       }
 
       return session;
     },
   },
   adapter: PrismaAdapter(prisma),
-  providers: useMock
-    ? [mockProvider]
-    : [
-        DiscordProvider({
-          clientId: env.DISCORD_CLIENT_ID,
-          clientSecret: env.DISCORD_CLIENT_SECRET,
-        }),
-        /**
-         * ...add more providers here
-         *
-         * Most other providers require a bit more work than the Discord provider.
-         * For example, the GitHub provider requires you to add the
-         * `refresh_token_expires_in` field to the Account model. Refer to the
-         * NextAuth.js docs for the provider you want to use. Example:
-         * @see https://next-auth.js.org/providers/github
-         **/
-      ],
-  session: {
-    strategy: useMock ? "jwt" : "database",
-  },
+  providers: [
+    DiscordProvider({
+      clientId: env.DISCORD_CLIENT_ID,
+      clientSecret: env.DISCORD_CLIENT_SECRET,
+    }),
+    /**
+     * ...add more providers here
+     *
+     * Most other providers require a bit more work than the Discord provider.
+     * For example, the GitHub provider requires you to add the
+     * `refresh_token_expires_in` field to the Account model. Refer to the
+     * NextAuth.js docs for the provider you want to use. Example:
+     * @see https://next-auth.js.org/providers/github
+     **/
+  ],
 };
 
 /**
