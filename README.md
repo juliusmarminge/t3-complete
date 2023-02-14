@@ -7,6 +7,7 @@ This is an extended version of the [T3 Stack](https://create.t3.gg/) project boo
 - E2E Testing using [Playwright](https://playwright.dev)
 - Integration tests using [Vitest](https://vitest.dev).
 - Docker Compose setup for local database
+- [`@next/font`] for optimized fonts
 
 ---
 
