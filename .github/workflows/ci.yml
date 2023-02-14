@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+
+      - name: Install dependencies and playwright binaries
+        run: pnpm install && pnpm playwright install chromium
+
+      - name: Setup environment variables
+        run: |
+          cp .env.example .env
+          echo "NEXTAUTH_SECRET=supersecret" >> .env
+
+      - name: Push schema to database
+        run: pnpx prisma db push
+
+      - name: Build application
+        run: pnpm build
+
+      - name: Run all tests
+        run: pnpm test

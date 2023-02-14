@@ -6,6 +6,7 @@ import {
   type NextAuthOptions,
 } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
+
 import { env } from "../env.mjs";
 import { prisma } from "./db";
 
@@ -37,6 +38,7 @@ declare module "next-auth" {
  *
  * @see https://next-auth.js.org/configuration/options
  **/
+
 export const authOptions: NextAuthOptions = {
   callbacks: {
     session({ session, user }) {
@@ -44,6 +46,7 @@ export const authOptions: NextAuthOptions = {
         session.user.id = user.id;
         // session.user.role = user.role; <-- put other properties on the session here
       }
+
       return session;
     },
   },
