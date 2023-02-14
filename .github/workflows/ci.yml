@@ -51,4 +51,6 @@ jobs:
         run: pnpm build
 
       - name: Run your tests
-        run: pnpx playwright test
+        run: pnpm test:e2e
+        env:
+          NODE_ENV: test

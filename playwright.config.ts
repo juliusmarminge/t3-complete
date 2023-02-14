@@ -12,19 +12,11 @@ const config: PlaywrightTestConfig = {
   testDir: "./e2e",
   globalSetup: "./e2e/setup/global.ts",
   use: {
-    trace: "retry-with-trace",
+    ...devices["Desktop Chrome"],
     storageState: "./e2e/setup/storage-state.json",
+    baseURL: baseUrl,
+    headless: opts.headless,
   },
-  projects: [
-    {
-      name: "Desktop Chrome",
-      use: {
-        ...devices["Desktop Chrome"],
-        baseURL: baseUrl,
-        ...opts,
-      },
-    },
-  ],
 };
 
 export default config;
