@@ -9,6 +9,8 @@ This is an extended version of the [T3 Stack](https://create.t3.gg/) project boo
 - Docker Compose setup for local database
 - [`@next/font`] for optimized fonts
 
+[Try it out now!](https://t3-complete.vercel.app)
+
 ---
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
