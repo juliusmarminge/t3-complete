@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  test:
+  build-test:
     runs-on: ubuntu-latest
     services:
       postgres:
