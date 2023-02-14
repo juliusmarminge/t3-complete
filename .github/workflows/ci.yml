@@ -43,8 +43,9 @@ jobs:
         run: pnpx prisma db push
 
       - name: Setup environment variables
-        run: cp .env.example .env
-        run: echo "NEXTAUTH_SECRET=supersecret" >> .env
+        run: |
+          cp .env.example .env
+          echo "NEXTAUTH_SECRET=supersecret" >> .env
 
       - name: Build application
         run: pnpm build
