@@ -5,8 +5,7 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_PASSWORD: password
-      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: ${PGPASSWORD}
     volumes:
       - ./prisma/data:/var/lib/postgresql/data
     ports:
