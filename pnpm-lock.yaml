@@ -27,7 +27,7 @@ specifiers:
   clsx: ^1.2.1
   eslint: ^8.34.0
   eslint-config-next: ^13.2.1
-  lucide-react: ^0.115.0
+  lucide-react: ^0.119.0
   next: ^13.2.1
   next-auth: ^4.19.2
   postcss: ^8.4.21
@@ -63,7 +63,7 @@ dependencies:
   '@trpc/server': 10.11.1
   class-variance-authority: 0.4.0_typescript@4.9.5
   clsx: 1.2.1
-  lucide-react: 0.115.0_react@18.2.0
+  lucide-react: 0.119.0_react@18.2.0
   next: 13.2.1_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.19.2_qgtcjgzkkjtbiyvnx7d32fl5vu
   react: 18.2.0
@@ -2949,8 +2949,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-react/0.115.0_react@18.2.0:
-    resolution: {integrity: sha512-VGL7jBKN6pEXi6peXoyn9t9O7olvinaAonnoe+iFi/F2q7/yQzAFM5KR1OY15u9PlrB3scI9HvcTFoOrIjUaVQ==}
+  /lucide-react/0.119.0_react@18.2.0:
+    resolution: {integrity: sha512-HpudADtrP1Its8ZwbtI643jJ3vWvqoUhn6rKFPCTmT1S0dh0NwUmSrjQSKSONoB3v7sqI9HZ7Cb/3hV6glASGQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
