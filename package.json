@@ -2,7 +2,7 @@
   "name": "t3-complete",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@7.29.0",
+  "packageManager": "pnpm@7.29.1",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
