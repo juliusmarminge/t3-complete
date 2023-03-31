@@ -18,7 +18,6 @@ export const postRouter = createTRPCRouter({
       include: {
         author: {
           select: {
-            id: true,
             name: true,
             image: true,
           },
