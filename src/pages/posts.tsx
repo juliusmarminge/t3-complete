@@ -1,8 +1,10 @@
+import { PostCategory } from "@prisma/client";
+import { useSession } from "next-auth/react";
 import { Controller } from "react-hook-form";
 import { z } from "zod";
 
-import { PostCategory } from "@prisma/client";
-import { useSession } from "next-auth/react";
+import { api, type RouterOutputs } from "~/utils/api";
+import { useZodForm } from "~/utils/zod-form";
 import { Avatar, AvatarFallback, AvatarImage } from "~/ui/avatar";
 import { Button } from "~/ui/button";
 import {
@@ -25,8 +27,6 @@ import {
   SelectValue,
 } from "~/ui/select";
 import { Textarea } from "~/ui/text-area";
-import { api, type RouterOutputs } from "~/utils/api";
-import { useZodForm } from "~/utils/zod-form";
 
 // This schema is reused on the backend
 export const postCreateSchema = z.object({

@@ -1,6 +1,5 @@
-import type { BrowserContext } from "@playwright/test";
-import { chromium } from "@playwright/test";
 import path from "node:path";
+import { chromium, type BrowserContext } from "@playwright/test";
 
 import { prisma } from "~/server/db";
 

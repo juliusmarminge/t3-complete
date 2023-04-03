@@ -1,8 +1,8 @@
-import { Book } from "lucide-react";
 import { type NextPage } from "next";
-import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
+import { Book } from "lucide-react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 import { api } from "~/utils/api";
 
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
               <h3 className="relative flex items-center gap-2 text-2xl font-bold">
                 <Book />
                 Posts
-                <span className="absolute top-0 right-52 flex h-5 w-5 animate-bounce items-center justify-center">
+                <span className="absolute right-52 top-0 flex h-5 w-5 animate-bounce items-center justify-center">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-700 opacity-75" />
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-indigo-500" />
                 </span>

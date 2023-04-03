@@ -1,7 +1,7 @@
+import { type AppType } from "next/app";
 import { Inter as FontSans } from "next/font/google";
 import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
-import { type AppType } from "next/app";
 
 import "~/styles/globals.css";
 import { api } from "~/utils/api";
