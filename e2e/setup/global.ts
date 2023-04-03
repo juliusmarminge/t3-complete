@@ -10,7 +10,7 @@ const testCookie: Cookie = {
   value: "d52f0c50-b8e3-4326-b48c-4d4a66fdeb64", // some random id
   domain: "localhost",
   path: "/",
-  expires: 1678926378, // some random date, can be expired doesn't matter
+  expires: -1, // expired => forces browser to refresh cookie on test run
   httpOnly: true,
   secure: false,
   sameSite: "Lax",

@@ -5,7 +5,7 @@
       "value": "d52f0c50-b8e3-4326-b48c-4d4a66fdeb64",
       "domain": "localhost",
       "path": "/",
-      "expires": 1678926378,
+      "expires": -1,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"
