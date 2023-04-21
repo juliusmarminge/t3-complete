@@ -65,8 +65,8 @@ dependencies:
     specifier: ^7.43.9
     version: 7.43.9(react@18.2.0)
   superjson:
-    specifier: 1.9.1
-    version: 1.9.1
+    specifier: 1.12.3
+    version: 1.12.3
   tailwind-merge:
     specifier: ^1.11.0
     version: 1.11.0
@@ -4296,8 +4296,8 @@ packages:
       pirates: 4.0.5
       ts-interface-checker: 0.1.13
 
-  /superjson@1.9.1:
-    resolution: {integrity: sha512-oT3HA2nPKlU1+5taFgz/HDy+GEaY+CWEbLzaRJVD4gZ7zMVVC4GDNFdgvAZt6/VuIk6D2R7RtPAiCHwmdzlMmg==}
+  /superjson@1.12.3:
+    resolution: {integrity: sha512-0j+U70KUtP8+roVPbwfqkyQI7lBt7ETnuA7KXbTDX3mCKiD/4fXs2ldKSMdt0MCfpTwiMxo20yFU3vu6ewETpQ==}
     engines: {node: '>=10'}
     dependencies:
       copy-anything: 3.0.3
