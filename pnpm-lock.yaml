@@ -41,8 +41,8 @@ dependencies:
     specifier: ^10.18.0
     version: 10.18.0
   class-variance-authority:
-    specifier: ^0.5.1
-    version: 0.5.1(typescript@5.0.3)
+    specifier: ^0.6.0
+    version: 0.6.0(typescript@5.0.3)
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
@@ -1759,14 +1759,15 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /class-variance-authority@0.5.1(typescript@5.0.3):
-    resolution: {integrity: sha512-J3tAiPbmBhPffsZ6Le3cR4o5hN78XBTst5NwCJJF7hAkZYIDuHQKV03Tb89zMDAxIONmM+DFRooMUCK5nTWpvQ==}
+  /class-variance-authority@0.6.0(typescript@5.0.3):
+    resolution: {integrity: sha512-qdRDgfjx3GRb9fpwpSvn+YaidnT7IUJNe4wt5/SWwM+PmUwJUhQRk/8zAyNro0PmVfmen2635UboTjIBXXxy5A==}
     peerDependencies:
       typescript: '>= 4.5.5 < 6'
     peerDependenciesMeta:
       typescript:
         optional: true
     dependencies:
+      clsx: 1.2.1
       typescript: 5.0.3
     dev: false
 
