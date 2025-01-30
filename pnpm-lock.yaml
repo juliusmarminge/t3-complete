@@ -84,7 +84,7 @@ dependencies:
 devDependencies:
   '@ianvs/prettier-plugin-sort-imports':
     specifier: ^3.7.2
-    version: 3.7.2(prettier@2.8.7)
+    version: 3.7.2(prettier@2.8.8)
   '@playwright/test':
     specifier: ^1.32.2
     version: 1.32.2
@@ -96,7 +96,7 @@ devDependencies:
     version: 20.8.8
   '@types/prettier':
     specifier: ^2.7.2
-    version: 2.7.2
+    version: 2.7.3
   '@types/react':
     specifier: ^18.0.33
     version: 18.0.33
@@ -123,10 +123,10 @@ devDependencies:
     version: 8.4.21
   prettier:
     specifier: ^2.8.7
-    version: 2.8.7
+    version: 2.8.8
   prettier-plugin-tailwindcss:
     specifier: ^0.4.0
-    version: 0.4.0(@ianvs/prettier-plugin-sort-imports@3.7.2)(prettier@2.8.7)
+    version: 0.4.0(@ianvs/prettier-plugin-sort-imports@3.7.2)(prettier@2.8.8)
   prisma:
     specifier: ^5.0.0
     version: 5.0.0
@@ -660,7 +660,7 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@ianvs/prettier-plugin-sort-imports@3.7.2(prettier@2.8.7):
+  /@ianvs/prettier-plugin-sort-imports@3.7.2(prettier@2.8.8):
     resolution: {integrity: sha512-bVckKToJM8XV2wTOG1VpeXrSmfAG49esVrikbxeFbY51RJdNke9AdMANJtGuACB59uo+pGlz0wBdWFrRzWyO1A==}
     peerDependencies:
       '@vue/compiler-sfc': '>=3.0.0'
@@ -677,7 +677,7 @@ packages:
       javascript-natural-sort: 0.7.1
       lodash.clone: 4.5.0
       lodash.isequal: 4.5.0
-      prettier: 2.8.7
+      prettier: 2.8.8
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1827,8 +1827,8 @@ packages:
       undici-types: 5.25.3
     dev: true
 
-  /@types/prettier@2.7.2:
-    resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
+  /@types/prettier@2.7.3:
+    resolution: {integrity: sha512-+68kP9yzs4LMp7VNh8gdzMSPZFL44MLGqiHWvttYJe+6qnuVr4Ek9wSBQoveqY/r+LwjCcU29kNVkidwim+kYA==}
     dev: true
 
   /@types/prop-types@15.7.5:
@@ -2385,7 +2385,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   /class-variance-authority@0.7.0:
     resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
@@ -3230,6 +3230,14 @@ packages:
 
   /fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -4426,7 +4434,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-tailwindcss@0.4.0(@ianvs/prettier-plugin-sort-imports@3.7.2)(prettier@2.8.7):
+  /prettier-plugin-tailwindcss@0.4.0(@ianvs/prettier-plugin-sort-imports@3.7.2)(prettier@2.8.8):
     resolution: {integrity: sha512-Rna0sDPETA0KNhMHlN8wxKNgfSa8mTl2hPPAGxnbv6tUcHT6J4RQmQ8TLXyhB7Dm5Von4iHloBxTyClYM6wT0A==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
@@ -4478,12 +4486,12 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      '@ianvs/prettier-plugin-sort-imports': 3.7.2(prettier@2.8.7)
-      prettier: 2.8.7
+      '@ianvs/prettier-plugin-sort-imports': 3.7.2(prettier@2.8.8)
+      prettier: 2.8.8
     dev: true
 
-  /prettier@2.8.7:
-    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
+  /prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
@@ -4722,7 +4730,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /run-parallel@1.2.0:
@@ -5374,7 +5382,7 @@ packages:
       postcss: 8.4.28
       rollup: 3.28.1
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vitest@0.34.0:
