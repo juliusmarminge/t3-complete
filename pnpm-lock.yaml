@@ -69,8 +69,8 @@ dependencies:
     specifier: ^7.43.9
     version: 7.43.9(react@18.2.0)
   superjson:
-    specifier: 2.2.0
-    version: 2.2.0
+    specifier: 2.2.6
+    version: 2.2.6
   tailwind-merge:
     specifier: ^1.11.0
     version: 1.11.0
@@ -2442,11 +2442,11 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /copy-anything@3.0.3:
-    resolution: {integrity: sha512-fpW2W/BqEzqPp29QS+MwwfisHCQZtiduTe/m8idFo0xbti9fIZ2WVhAsCv4ggFVH3AgCkVdpoOCtQC6gBrdhjw==}
-    engines: {node: '>=12.13'}
+  /copy-anything@4.0.5:
+    resolution: {integrity: sha512-7Vv6asjS4gMOuILabD3l739tsaxFQmC+a7pLZm02zyvs8p977bL3zEgq3yDk5rn9B0PbYgIv++jmHcuUab4RhA==}
+    engines: {node: '>=18'}
     dependencies:
-      is-what: 4.1.8
+      is-what: 5.5.0
     dev: false
 
   /cross-spawn@7.0.3:
@@ -3715,9 +3715,9 @@ packages:
       get-intrinsic: 1.2.0
     dev: true
 
-  /is-what@4.1.8:
-    resolution: {integrity: sha512-yq8gMao5upkPoGEU9LsB2P+K3Kt8Q3fQFCGyNCWOAnJAMzEXVV9drYb0TXr42TTliLLhKIBvulgAXgtLLnwzGA==}
-    engines: {node: '>=12.13'}
+  /is-what@5.5.0:
+    resolution: {integrity: sha512-oG7cgbmg5kLYae2N5IVd3jm2s+vldjxJzK1pcu9LfpGuQ93MQSzo0okvRna+7y5ifrD+20FE8FvjusyGaz14fw==}
+    engines: {node: '>=18'}
     dev: false
 
   /is-wsl@2.2.0:
@@ -5008,11 +5008,11 @@ packages:
       pirates: 4.0.5
       ts-interface-checker: 0.1.13
 
-  /superjson@2.2.0:
-    resolution: {integrity: sha512-vSr6kwT/LY3T1+JaZllIGFp5+qEYyCw/s6EMgR8TulTwRbKETuVIqN4RTurPBTU/HlEpP0ytN3srB2vjjeBRoQ==}
+  /superjson@2.2.6:
+    resolution: {integrity: sha512-H+ue8Zo4vJmV2nRjpx86P35lzwDT3nItnIsocgumgr0hHMQ+ZGq5vrERg9kJBo5AWGmxZDhzDo+WVIJqkB0cGA==}
     engines: {node: '>=16'}
     dependencies:
-      copy-anything: 3.0.3
+      copy-anything: 4.0.5
     dev: false
 
   /supports-color@5.5.0:
